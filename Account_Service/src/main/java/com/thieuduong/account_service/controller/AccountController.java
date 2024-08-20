@@ -16,11 +16,13 @@ import com.thieuduong.account_service.model.StatisticDTO;
 @RestController
 @RequestMapping("/account")
 public class AccountController {
+
 	@Autowired
 	KafkaTemplate<String, Object> kafkaTemplate;
 
 	@PostMapping("/new")
 	public AccountDTO create(@RequestBody AccountDTO account) {
+
 		StatisticDTO stat = new StatisticDTO(
 			"Account " + account.getEmail() + " is created", new Date());
 		stat.setStatus(false);
