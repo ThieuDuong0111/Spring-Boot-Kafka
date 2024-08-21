@@ -2,8 +2,15 @@ package com.thieuduong.account_service.model;
 
 import java.util.Date;
 
-public class StatisticDTO {
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
+@Entity
+public class StatisticDTO {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	private String message;
@@ -52,5 +59,4 @@ public class StatisticDTO {
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-
 }

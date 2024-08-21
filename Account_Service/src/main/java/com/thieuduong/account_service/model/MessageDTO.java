@@ -1,60 +1,67 @@
 package com.thieuduong.account_service.model;
 
+import jakarta.persistence.*;
+
+@Entity
 public class MessageDTO {
-	
-	private int id;
-	private String to;
-	private String toName;
-	private String subject;
-	private String content;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	private boolean status;
+    @Column(name = "to_email")
+    private String to;
 
-	public int getId() {
-		return id;
-	}
+    private String toName;
+    private String subject;
+    private String content;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+    private boolean status;
 
-	public boolean getStatus() {
-		return status;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setStatus(boolean status) {
-		this.status = status;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getTo() {
-		return to;
-	}
+    public boolean getStatus() {
+        return status;
+    }
 
-	public void setTo(String to) {
-		this.to = to;
-	}
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
 
-	public String getToName() {
-		return toName;
-	}
+    public String getTo() {
+        return to;
+    }
 
-	public void setToName(String toName) {
-		this.toName = toName;
-	}
+    public void setTo(String to) {
+        this.to = to;
+    }
 
-	public String getSubject() {
-		return subject;
-	}
+    public String getToName() {
+        return toName;
+    }
 
-	public void setSubject(String subject) {
-		this.subject = subject;
-	}
+    public void setToName(String toName) {
+        this.toName = toName;
+    }
 
-	public String getContent() {
-		return content;
-	}
+    public String getSubject() {
+        return subject;
+    }
 
-	public void setContent(String content) {
-		this.content = content;
-	}
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 }

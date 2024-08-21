@@ -17,4 +17,16 @@ public class StatisticServiceApplication {
 		return new JsonMessageConverter();
 	}
 
+//	@Bean
+//	DefaultErrorHandler errorHandler(KafkaOperations<Object, Object> template) {
+//		return new DefaultErrorHandler(
+//			new DeadLetterPublishingRecoverer(template),
+//			new FixedBackOff(1000L, 2));
+//	}
+//
+//	@Bean
+//	NewTopic dlt() {
+//		return new NewTopic("statistic.DLT", 1, (short) 1);
+//	}
+
 }
